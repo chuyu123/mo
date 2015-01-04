@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-07-11
+*/
+//频道页开始
+@import "initialize.scss";
+@import "global.scss";
+@import "header-box.scss";
+@import "navact-broadcast.scss";//引导页广播栏
+@import "act-li-box.scss";//引导页块元素栏
+@import "xxtyg-box.scss";//线下体验馆
+@import "jgd-bm-box.scss";//底部按钮块
+@import "footer.scss";
+@import "bmbar.scss";
+@import "popup.scss";
+
+//列表页开始
+@import "side.scss";//列表页幻灯片
+@import "product-box.scss";//列表页产品
+@import "act-area-box.scss";//列表页抢车活动&最新报名
+@import "require-car.scss";//活动列表页购车需求
+
+//内页开始
+@import "header-inside-box.scss";//内页头部
+@import "console-calc-frame.scss";//内页价格信息报名栏
+@import "fruit.scss";//fruit模块

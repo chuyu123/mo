@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+/* fruit */
+.fruit-hd{ background:#fff; border-bottom:1px solid #febc02; padding:10px; font-size:1.1em; line-height:1.1em;
+  i{ display:inline-block; color:#fcbb01; background:#fff; border-radius:50%; margin-right:5px; font-size:1.2em; vertical-align: top;}
+}
+.fruit-tit-ul{ background:#fff;
+  li{
+    a{ display:block; height:40px; line-height:40px; overflow: hidden; color:#333; padding:0 20px; border-bottom:1px solid #eee;
+      i{ float:right; color:#666;}
+    }
+  }
+  li:last-child a{ border-bottom:none;}
+}
+.fruit-img-ul{
+  li{ float:left; position:relative; height:202px; cursor: -moz-grab; cursor: -webkit-grab;}
+  .link{ display:block; width:150px; margin:10px 5px 0;}
+  img{ display:block; width:100%; @include radius;}
+  .tit{ display:block; height:40px; overflow:hidden; color:#111; margin:0 5px;}
+  .val{ float:left; color:#ec131c; font-size:.9em; line-height: 30px; margin-left:5px;
+    b{ font:400 1.6em arial;}
+    .t{ display:block; font-size:.9em; color:#6d6d6c; height:20px; overflow:hidden; line-height:20px;}
+  }
+  .btnact{ position:absolute; right:2px; bottom:5px; line-height: 30px; background:#5396dd; border-radius:20px; color:#fff; padding:0 10px;}
+}
+.morecars{
+  .fruit-bd{ background:#fff; height:222px; overflow-x:auto;}
+}
+/* othercars */
+.othercars{
+  .fruit-bd{ background:#fff; padding-bottom:10px;}
+}
+.othercars-frame{ height:212px; overflow:hidden;}
+.agent-banner{padding:10px 20px;border-top:1px solid #eee;background:#fff;
+   .agent-box{overflow:hidden;@include radius(3px);background:#c71a1a;padding:5px 70px 5px 5px;border:1px solid #c71a1a;height:60px;}
+   .agent-left{float:left;width:100%;height:100%;color:#fff;}
+   .agent-right{float:right;width:70px;margin:0 -80px 0 10px;position:relative;}
+   .agent-right-bg{background-color:#f4ebd2;transform:rotate(30deg);position:absolute;right:-10px;top:-20px;height:90px;width:100%;}
+   .f-tolink{color:#c71a1a;font-size:26px;font-weight:bold;position:relative;margin-top:20px;text-align:center;display:block;}
+   .vMiddle{text-align:left;}
+   .vHeight{height:60px;}
+}
+
+@media only screen and (min-width:1024px) {
+  .fruit-tit-ul li a{ height:60px; line-height:60px; font-size:1.2em;}
+  .agent-banner{margin:0 12px;}
+}
+
+

@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+Date: 2014-10-15
+*/
+.zc-ul{
+	a{ display:block; width:100%; border-bottom:1px solid #eee; height:40px; line-height:40px; overflow:hidden; font-size: .9em; color:#333; padding:0 10px; @include boxsizing;}
+	span{ background:#292929; color:#fff; font-size:.8em; line-height:18px; margin-right:6px; padding:0 3px; @include radius(2px);}
+}
+.hdzxbm{ height:120px; overflow:hidden;}
+.hdzxbm-ul{ font-size:.9em; color:#333;
+  li{ height:40px; border-bottom:1px solid #eee; overlfow:hidden; padding:0 90px 0 10px; @include boxsizing;}
+  .tit{ width:100%; height:100%; line-height:40px; overflow:hidden;}
+  .info{ float:right; width:70px; text-align: right; color:#999; overflow: hidden; margin-right:-80px;padding-top:5px;}
+  .name{ display:block;font-size:.9em; line-height:12px;}
+  .tel{ font-size:.8em;}
+}
+@media only screen and (min-width:768px){
+  .act-area-box{margin:12px 12px 0;
+		.act-area{float:left;width:50%;}
+		.act-area:first-child{width:49%;margin-right:1%;}
+	}
+}

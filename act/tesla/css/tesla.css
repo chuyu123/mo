@@ -1,0 +1,46 @@
+@charset 'utf-8';
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,a{ margin:0; padding:0;}
+body,button,input,select,textarea,td{ font-size:14px; line-height:20px; font-family:"microsoft yahei",sans-serif;}
+ul,ol{ list-style:none;}
+input[type=text], input[type=button], input[type=password]{ -webkit-appearance:none;}
+table{ border-collapse:collapse;}
+a{ text-decoration:none; color:#306bf0;}
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.clear{ clear:both;}
+
+body{ background:#e4e4e4;/* Old browsers */}
+
+/*特斯拉——————*/
+.main-box{position: relative;}
+.tesla-box{position: relative;padding:90px 0;}
+.flag{background:url(../images/tesla/tesla_flag.png) no-repeat;width:56px;height:80px;position: absolute;right:30px;top:0;background-size:100%;}
+.banner{width:100%;}
+.yuyue{background:url(../images/tesla/yuyue.png) no-repeat;width:98px;height:80px;background-size:100%; position: fixed;right:0;bottom:0;}
+.tesla-box2,.tesla-box3,.tesla-box4{padding:25px;}
+.tesla-box4{padding:25px 25px 85px;}
+.tabcon dd{padding:5px 0;}
+.tabcon input{border:none;height:36px;line-height:36px;border-radius:4px;width:100%;text-indent: 10px;}
+.tabcon select{color: #a3a3a3;margin: 0;border-radius: 4px;width:100%;border:none;height:36px;line-height:36px;text-indent:8px;}
+.tabcon .btn{display: block;width:100%;margin-top:5px;height:36px;line-height: 36px;border-radius: 4px;background:#c71a1a;color:#fff;font-size:1.1em;border:none;}
+
+.popup {display: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,.7);z-index: 1000;}
+.popup .inside {position: relative;}
+.popup .box {width: 300px;background: #fff;border-radius: 5px;margin: 0 auto;-moz-transform: scale(0);-webkit-transform: scale(0);transform: scale(0);-moz-transition: all .4s ease;-webkit-transition: all .4s ease;transition: all .4s ease;}
+.popup-hd {position: relative;height: 10px;line-height: 40px;text-align: center;font-size: 1.3em;padding: 5px 0 10px;}
+.popup-hd .close {position: absolute;right: 0;top: 0;padding: 10px;}
+.popup-hd .close em {display: block;width: 15px;height: 15px;background: url(../images/tesla/close.png) no-repeat;background-size: 100%;}
+.popup-bd {padding: 10px;}
+.popup-bd .look{display: block;width:40%;margin-top:5px;height:36px;line-height: 36px;border-radius: 4px;background:#c71a1a;color:#fff;font-size:1.1em;text-align: center;margin:10px auto;}
+
+@media only screen and (min-width:480px){
+    
+}
+@media only screen and (min-width:640px){
+    
+}
+@media only screen and (min-width:768px){
+    
+}
+
+

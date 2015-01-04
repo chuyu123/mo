@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+Date: 2014-10-15
+*/
+
+/* bchdcx-box */
+.bchdcx-box{ padding:10px;}
+.bchdcx-tit{ color:#c71a1a; overflow: hidden;
+	i{ float:left; margin-right:3px;}
+}
+.bchdcx-ul{ margin-top:-3px;
+	 li{ float:left; background:#efefef; @include radius(5px); margin:8px 5px 0 0; line-height:30px; padding:0 15px; font-size: .9em;}
+	 li.cur{ background: #b4b4b4; color:#fff;}
+}

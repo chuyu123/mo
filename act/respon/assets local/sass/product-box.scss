@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*
+Date: 2014-10-15
+add by all
+*/
+
+/* nav-box */
+.nav-box{ height:50px; line-height:50px;
+	.selected{top:0;left:0;position:fixed;z-index:100;}
+}
+.nav-position{ width:100%; background:#490000;}
+.nav-ul{ position:relative; width:100%; @include displaybox;
+	li{ position:relative; float:left; @include flex(1); height:100%; overflow:hidden; text-align:center; z-index:10;}
+	.back{ position:absolute; left:0; top:0; z-index:9; background:#93003c;}
+	a{ display:block; width:100%; height:100%; color:#fff;}
+	i{ display:none;}
+	.current { 
+		a{background:#900003;}
+		i{ position:absolute; left:50%; bottom:-25px; display:block; font-style:normal; width:12px; margin-left:-6px;}
+	}
+}
+
+/* act-ul2-hd */
+.act-ul2-hd{ border-top:2px solid #b9000d; line-height:35px;
+  strong{
+    float:left;width:23%;margin-left:2%;position:relative;height:35px;
+    i{
+      display:inline-block;position:absolute;right:0;top:0; font-size:.8em; margin-left:2px; line-height:30px; color: #b9000d;
+    }
+  }
+  .hide-select-box{
+    width:100%;position:relative;height:100%;float:left;overflow:hidden;
+    .hide-select-inside{
+      display: block;left: 0;position: absolute;top: 0;width: 120%;height:100%;
+    }
+  }
+}
+.act-ul2-hd strong:first-child{margin-left:1%;}
+.act-ul2-sel{ position:relative; width:80px;float:left; color:#666;
+	.tit{color:#b9000d; text-align:center;}
+	.ul{ display:none; position:absolute; left:0; top:30px; background:#ddd; z-index:100;}
+	li{ width:120px; line-height:30px; padding-left:10px;}
+	li.cur{ background:#efefef; color:#111;}
+}
+.act-ul2-select{
+  border: medium none;width:100%;height:20px;margin-top:7px;line-height:20px; direction:ltr;background:transparent;font-size:13px;
+}
+.act-ul2-btn{ float:left; padding:0 6px; color:#666;
+	.f-act-down2{ font-size:.8em; margin-left:3px;}
+}
+.act-ul2-btn.cur{ background:#efefef; color:#111;}
+.act-ul2-sel-open{ 
+	.ul{display:block;}
+	.f-detla-bm{ -webkit-transform:rotate(180deg);}
+}
+
+/* Product List Horizontal */
+.product-list-horizontal{border-top:1px solid #eee;
+	li{border-bottom:1px solid #eee;
+		a{ display:block; overflow:hidden; padding:10px 10px 10px 140px;}
+	}
+	.img{ float:left; position:relative; height:90px; margin-left:-130px;
+		img{ border-radius:2px;}
+	}
+	.tip{ position:absolute; left:3px; top:0; display:block; width:40px; height:30px; line-height:10px; background:url(../assets/down.png) no-repeat; background-size:100%; font-size:.7em; color:#fff; padding-top:3px; font-weight:700; text-align:center;}
+	.peo{ position:absolute; left:0; bottom:0; width:100%; height:20px; overflow:hidden; background:rgba(0,0,0,.7); text-align:center; color:#fff; font-size:.9em; border-radius:0 0 2px 2px;
+		b{ font-weight:400; color:#ffa200; margin:0 2px;}
+	}
+	.tit{ display:block; color:#000; max-height:34px; line-height:17px; overflow:hidden; margin:10px 5px 3px; font-size:.9em;float:left; width:100%; margin:0;
+		span{color:#b9000d;}
+	}
+	.value{ display:block; color:#000; height:33px; line-height:16px; overflow:hidden; font-size:.8em;float:left;width:100%;margin:0;padding:3px 0 1px;
+		b{display:block; font-size:1.2em;}
+	}
+	.zd{ float:left; width:80px; color:#666;
+		b{ text-decoration:line-through; font-weight: 400;}
+	}
+	.xs{ float:left; width:40%; color:#ff0000;}
+	.bm{ display:block;float:left;width:100%;position:relative;}
+	.btn{ display:none; float:right; width:64px; height:24px; line-height:24px; background:#b9000d; color:#fff; text-align:center; @include radius(3px);position:absolute;right:0;bottom:0;}
+	.xsj{ float:left; width:100%; font-size:.9em; color:#000;
+		span{ display:inline-block; width:40px; height:16px; background:#c71a1a; border-radius: 2px; color:#fff; line-height: 16px; font-size:.9em; text-align: center; margin-right:5px; font-weight: 700;}
+		b{ font-weight: 400;}
+	}
+
+}
+
+/* bchdcx-box */
+.bchdcx-box{ padding:10px;}
+.bchdcx-tit{ color:#c71a1a; overflow: hidden;
+	i{ float:left; margin-right:3px;}
+}
+.bchdcx-ul{ margin-top:-3px;
+	 li{ float:left; background:#efefef; @include radius(5px); margin:8px 5px 0 0; line-height:30px; padding:0 15px; font-size: .9em;}
+	 li.cur{ background: #b4b4b4; color:#fff;}
+}
+
+/* Product List Vertical*/
+.product-list{margin-bottom:10px;padding:0 8px;
+	.product-item{position:relative; float:left; width:46%; background:#fff; padding-bottom:3px;@include radius(2px);margin:10px 2%;box-shadow: 1px 1px 1px #f4f4f4,-1px -1px 1px #f4f4f4,-1px 1px 1px #f4f4f4,1px -1px 1px #f4f4f4;}
+	.tip{ position:absolute; left:5px; top:0; display:block; width:45px; height:33px; line-height:12px; background:url(../assets/down.png) no-repeat; background-size:100%; font-size:.8em; color:#fff; padding-top:2px; font-weight:700; text-align:center;}
+	img{ display:block; border-radius:2px 2px 0 0; margin-left: -1px;width:100%;}
+	.tit{display:block; color:#000; height:34px; line-height:17px; overflow:hidden; margin:10px 5px 3px; font-size:.9em;
+		em{font-style:normal; background:#c71a1a; color:#fff; border-radius:1px; font-size:.9em; margin-right:2px; padding:0 2px;}
+		span{color:#b9000d;}
+	}
+	.value{display:block; color:#000; height:33px; line-height:16px; overflow:hidden; margin:0 5px 3px; padding-top:5px; font-size:.8em;
+		b{display:block; font-size:1.2em;
+			i{ font-weight:400; font-size:.8em; font-style:normal;}
+		}
+	}
+	.zd{ float:left; width:50%;
+		b{text-decoration:line-through; font-weight: 400;}
+	}
+	.xs{float:left; width:50%; color:#ff0000;}
+	.bm{ display:block; margin:0 5px;}
+	.num{ float:left; color:#000; font-style:italic; font-size:.7em; line-height:24px;
+		span{color:#c10050;}
+	}
+	.btn{display:none; float:right; width:64px; height:24px; line-height:24px; background:#b9000d; color:#fff; text-align:center; border-radius:3px;}
+}
+.list-sbanner{ display:block; background:#f9c500; margin:0 10px;}
+.list-sbanner img{ display:block; min-width:300px; max-width:640px; margin:0 auto;}
+
+@media only screen and (min-width:768px){
+  .product-box{margin:12px 12px 0;}
+  .product-list{ padding:0;
+		.product-item{width:31.33333%;margin:10px 1%;}
+	}
+  .list-sbanner{ margin:0 12px;}
+}

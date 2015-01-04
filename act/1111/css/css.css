@@ -1,0 +1,107 @@
+@charset 'utf-8';
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,a{ margin:0; padding:0;}
+body,button,input,select,textarea,td{ font-size:14px; line-height:20px; font-family:"microsoft yahei",sans-serif;}
+ul,ol{ list-style:none;}
+input[type=text], input[type=button], input[type=password]{ -webkit-appearance:none;}
+table{ border-collapse:collapse;}
+a{ text-decoration:none; color:#306bf0;}
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.clear{ clear:both;}
+.mt10{ margin-top:10px!important;}
+
+body{ background:#ba1a34;}
+.container{ min-width:320px; max-width:768px; margin:0 auto;}
+.banner{ position:relative; background:url(../images/banner.jpg) no-repeat; background-size:100%;}
+.date{ position:absolute; right:22px; top:5px; color:#881d6b;}
+.btn-rule{ position:absolute; right:5px; bottom:5px; width:80px; height:80px;}
+.bm{ background:url(../images/bm.jpg) no-repeat; background-size:100%; overflow:hidden;}
+/* slot */
+.slot{ margin:10px 10px 0; padding:10px 0; background:rgba(114,24,58,.8); border-radius:3px; text-align:center;}
+.slot .txt{ font-size:1.3em; color:#fff; line-height:25px;}
+.slot .color{ font-size:0.9em; color:#ffc310; display:block;}
+.ggk-area{ position:relative; border:1px solid #afafaf; border-radius:2px; margin:10px 45px; height:50px; line-height:50px; color:#ffcd39; font-size:1.4em;}
+.ggk-area .info{ position:absolute; left:0; top:0; width:100%; height:100%;}
+.ggk-area .bg{ position:absolute; left:0; top:0; width:100%; height:100%; z-index:1;}
+.ggk-area .bg div{ width:100%; height:100%;}
+.ggk-area .tit{ color:#666; background:url(../images/scratch-bg.png);}
+/* btn */
+.btn, .btns a{ display:inline-block; width:260px; height:42px; line-height:42px; background:url(../images/btn-long.png) no-repeat; background-size:100%; margin:10px auto 20px; font-size:1.2em; text-align: center; color:#a9003d;}
+.btn{ display:block;}
+.btns{ margin:10px auto 20px; text-align: center;}
+.btns a{ background-image:url(../images/btn-short.png); width:125px; margin:0 10px;}
+.btn-info{ color:#fff; text-align:center;}
+.tozjzh{ display:block; font-size:1.2em; color:#0088ce; text-align: center; text-decoration: underline; margin-bottom:20px;}
+/* rule-box */
+.rule-box{ background:#fff4d3; padding:10px 0; color:#333333; font-size:1.1em;}
+.rule-list{ border-top:1px dashed #cab67b; margin:0 10px 0; padding:15px 10px;}
+.rule-list-box{ padding:20px 10px 0;}
+.rule-list-box .rule-list:first-child{ border:none;}
+.rule-list .tit{ color:#bd0000; font-size:1.2em; padding-bottom:8px;}
+.rule-lc li{ padding-bottom:15px;}
+.rule-lc .t{ color:#bd0000; padding-bottom:3px;}
+.rule-list-p{ padding-bottom:5px;}
+.rule-list-p .num{ color:#bd0000;}
+/* footer */
+.footer{ background:#56001f; padding:10px 67px 10px 106px; color:#fff;}
+.totop{ float:right; width:67px; height:35px; background: url(../images/totop.png) no-repeat; background-size:100%; margin-right:-67px;}
+.tel-tit{ float:left; font-size:1.2em; line-height:37px; margin-left:-106px;}
+.tel-tit i{ float:left; width:20px; height:22px; background:url(../images/i-tel.png) no-repeat; background-size:100%; margin:7px 5px 0 8px;}
+.tel-num{ float:left; width:100%; color:yellow; line-height:18px; font-size:20px;}
+.time{ float:left; width: 100%; font-size:12px;}
+/* popup */
+.popup{ display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.7); z-index:1000;}
+.popup-inside{ position:fixed; left:50%; width:300px; background:#fff; border-radius:5px; z-index:1000; margin-left:-150px;}
+.popup-hd{ position:relative; height:40px; line-height:40px; text-align:center; font-size:1.3em; padding:5px 0 10px;}
+.popup-hd .title-box{ display:block; width:100%; height:100%;}
+.popup-hd .f-close{ position:absolute; right:0; top:0; padding:10px;}
+.popup-hd .f-close em{ display:block; width:15px; height:15px; background:url(../images/close.png) no-repeat; background-size:100%;}
+.popup-bd{ padding:10px;}
+.fastreg-box .fastreg-list{ margin-top:10px;}
+.fastreg-box .fastreg-large{ float:left; width:50%;margin-left: 15px;}
+.fastreg-box .fastreg-small{ float:right; width:40%; text-align:right; line-height:35px;}
+.fastreg-box .fastreg-small a{ margin-right:8px;}
+.fastreg-box .fastreg-ipt{ display:block; width:85%; border:1px solid #aaa; border-radius:3px; margin:0 auto; padding:5px 10px;}
+.fastreg-box .fastreg-large .fastreg-ipt{ width:120px; margin:0 0 0 8px;}
+.fastreg-box .tip, .fastreg-box .error{ font-size:.9em; margin:0 32px; line-height:15px;}
+.fastreg-box .error{ color:#f00;}
+.fastreg-box .btn{ display:block; width:260px; height:43px; line-height:43px; font-size:1.2em; margin:15px auto 10px;}
+.lj-ul li{ padding:0 10px 10px;}
+
+.maskframe{ position: fixed; left:0; top:0; display: none; width: 100%; height: 100%; z-index:1010;}
+.xuanyao{ background:url(../images/xuanyao.png) no-repeat; background-size: 100%;}
+.yaoqing{ background:url(../images/yaoqing.png) no-repeat; background-size: 100%;}
+.zhuanzeng{ background:url(../images/zhuanzeng.png) no-repeat; background-size: 100%;}
+#pmsg{margin-left:-15px;}
+@media only screen and (min-width:480px){
+    .date{ font-size:1.6em; right:50px; top:13px;}
+    .btn-rule{ width:150px; height:150px;}
+    .slot{ padding:15px 0;}
+    .slot .txt{ font-size:0.9em; line-height:30px;}
+    .btn, .btns a{ width:400px; height:65px; line-height:65px; font-size:1.5em;}
+    .btns a{ width:191px;}
+    .btn-info{ font-size:1.3em; padding-bottom:10px;}
+    .tozjzh{ font-size:1.5em;}
+    .tel-tit{ float:left; font-size:1.3em; line-height:37px; margin-left:-106px;}
+    .footer{ padding:15px 105px 15px 150px;}
+    .totop{ width:105px; height:55px; margin-right:-105px;}
+    .tel-tit{ font-size:1.5em; line-height:52px; width:150px; margin-left:-150px;}
+    .tel-tit i{ width:30px; height:33px; margin:10px 10px 0 10px;}
+    .tel-num{ line-height:20px; font-size:30px;}
+    .time{ font-size:18px; margin-top:10px;}
+}
+@media only screen and (min-width:640px){
+    .date{ font-size:1.7em; right:70px; top:20px;}
+    .btn-rule{ width:200px; height:200px;}
+    .slot{ margin:20px 26px; border-radius:6px;}
+    .scratch-area{ margin:20px 90px; height:80px; line-height:80px;}
+    .btn, .btns a, .tozjzh{ font-size:1.8em;}
+}
+@media only screen and (min-width:768px){
+    .date{ font-size:2em; right:70px; top:23px;}
+    .btn-rule{ width:200px; height:200px;}
+    .tel-num{ width:auto; line-height:52px; font-size:30px;}
+    .time{ width:auto; line-height:52px; margin:0 0 0 10px;}
+}
+
+

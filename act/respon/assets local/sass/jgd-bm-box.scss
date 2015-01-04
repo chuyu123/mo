@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+/* jgd-bm-box */
+.jgd-bm-box{ margin-top:13px; padding:10px 0 25px; background:#fff; border-top:1px solid #d3d3d3;}
+/* tel-box */
+.gcxq{ display:block; line-height:35px; overflow:hidden; color:#fff; background:#c71a1a; text-align:center; @include radius(4px); margin:0 10px; font-size:1.1em;}
+.xunwen-box-outside{ margin:13px 10px 0;}
+.xunwen-box{ width:100%; border:1px solid #e0e0e0; @include radius(5px); @include displaybox; text-align:center;
+  p{ height:75px; @include flex; @include boxsizing;}
+  a{ display:block; height:100%; overflow:hidden; border-left:1px solid #e0e0e0; color:#666;}
+  p:first-child a{ border-left: none;}
+  i{ display:block; width:50px; height:35px; margin:10px auto 0; background:url(xunwen1.png) no-repeat; background-size:100%;
+    &.i2{ background-image:url(xunwen2.png);}
+    &.i3{ background-image:url(xunwen3.png);}
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .jgd-bm-box{ float:left; width:190px; height:100%; margin:0 -190px 0 0; padding:0; border: none;}
+  .xunwen-box-outside{ margin:0;}
+  .gcxq{ display:none;}
+  .xunwen-box{
+    border:none; display:block; @include radius(0);
+    p{ display:block; height:100px;}
+    a{ border-top:1px solid #e0e0e0;}
+    p:first-child a{ border-top:none; border-left: 1px solid #e0e0e0;}
+    i{ margin-top:25px;}
+  }
+}

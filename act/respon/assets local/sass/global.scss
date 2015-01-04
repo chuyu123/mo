@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+/* global */
+$baselinkcolor : #333;/* 中黑 */
+$linkblue : #1b8cd9;/* 类似天蓝，略深 */
+$baseline : #eee;
+/* class red */
+$darkred : #fa6961;/* 淡纯色红 */
+$aka : #ce0000;/* 赤红 */
+/* class blue */
+$darkindigo : #324065;/* 靛蓝 */
+$moredarkindigo : #28365b;/* 更深的靛蓝 */
+$grayblue : #596076;/* 灰蓝 */
+$lightblue : #3598db;/* 高亮蓝 */
+
+//mixin
+@mixin displaybox{
+  display:-moz-box; display:-webkit-box; display:box;
+}
+@mixin boxsizing{
+  -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+}
+@mixin flex($length : 1){
+  -moz-box-flex:$length; -webkit-box-flex:$length; box-flex:$length;
+}
+@mixin radius($radius : 2px){
+  border-radius:$radius;
+}
+@mixin rotate($value : 0){
+  -moz-transform:rotate($value); -webkit-transform:rotate($value); transform:rotate($value);
+}
+
+a{ color:$baselinkcolor;}
+.lightbluelinkcolor{ color:$lightblue; text-decoration:underline;}
+body{ min-width:320px; margin:0 auto; background:#fff;}
+.bg-page{ background:#ebebeb;}
+.sub-page{ padding-top:50px;}
+.vMiddle,.vHeight{display: table-cell;zoom: 1;vertical-align: middle;text-align: center;overflow: hidden;}
+.vHeight{width:0;}
+
+/* part iconfont */
+@font-face{ font-family:'iconfont'; font-weight:normal; font-style:normal; src:url(icomoon.woff) format('woff'),url('icomoon.ttf') format('truetype'),url('icomoon.svg#iconfont') format('svg');}
+[class^='f-']{ font-family:iconfont; font-style:normal; -webkit-font-smoothing:antialiased;}
+.f-member:after { content: '\e603'; }
+.f-broadcast:after { content: "\e61d"; }
+.f-tolink:after { content: "\e604"; }
+.f-adds:after { content: "\e621"; }
+.f-close:after { content: '\e626'; }
+.f-return:after { content: '\E607'; }
+.f-home:after { content: '\e614'; }
+.f-down:after { content: "\e61c"; }
+.f-share:after { content: '\Ee6f3'; }
+.f-like:after { content: '\E600'; }
+.f-calc:after { content: "\e622"; }
+.f-arrright:after { content: "\e619"; }
+.f-chain:after { content: '\E601'; }
+.f-acttel:after { content: "\e61f"; }
+.f-weibo:after { content: '\e60f'; }
+.f-qzone:after { content: '\e611'; }
+.f-txweibo:after { content: '\e610'; }
+.f-detla-bm:after { content: '\e617'; }
+.f-icon:after { content: '\e623'; }
+

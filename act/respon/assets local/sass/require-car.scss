@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+.mt25{margin-top:25px;}
+.require-box .gcxq-info{padding:5px 10px 0;font-size:0.9em;line-height:17px;color:#666;}
+@media only screen and (min-width:768px){
+	.require-box{height:300px;margin:13px 12px 0;padding-right:190px;background:#fff;border:1px solid #d3d3d3;}
+	.gcxq-box{background:url(../assets/gcxq.jpg) no-repeat 0 bottom;background-size:100%;float:left;height:100%;width:100%;}
+	.jgd-bm-box{
+		.gcxq,.gcxq-info{display:none;}
+	}
+}

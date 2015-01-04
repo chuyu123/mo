@@ -1,0 +1,7 @@
+﻿#主站
+qkmobile static html/
+index.php
+#活动
+act/respon/respon static html/
+act/respon/index.php
+act/respon/assets/css.css.map

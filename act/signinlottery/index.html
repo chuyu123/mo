@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link href="css/signinlottery.css" rel="stylesheet"/>
+    <!--data.js为前端开发静态页面使用的填充数据js文件，线上环境请删除 起始-->
+    <script src="../../js/data.js"></script>
+    <!--/data.js为前端开发静态页面使用的填充数据js文件，线上环境请删除 停止-->
+</head>
+<body>
+<div class="topbar">
+    <a href="signinlotterypublicity.html" class="home"><i class="f-home"></i></a>
+    <a href="index.html" class="btn"><i class="f-return"></i></a>
+    签到抽奖福利
+</div>
+<div class="container">
+    <!--签到抽奖模块-->
+    <div id="lottery-box" class="lottery-box">
+    <img src="images/bg.jpg" alt="" width="100%" height="100%">
+    <section class="lottery-area" id="lottery-area">
+        <div class="info">您已成功签到：<span>5</span>天<br />买车可省<span>1500</span>元</div>
+        <div class="calendar">
+            <table class="calendar-table" width="100%">
+                <tr>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                    <th>日</th>
+                </tr>
+                <tr>
+                    <td class="cur"><span>17</span></td>
+                    <td><span>18</span></td>
+                    <td><span>19</span></td>
+                    <td><span>20</span></td>
+                    <td><span>21</span></td>
+                    <td><span>22</span></td>
+                    <td><span>23</span></td>
+                </tr>
+                <tr>
+                    <td><span>24</span></td>
+                    <td><span>25</span></td>
+                    <td><span>26</span></td>
+                    <td><span>27</span></td>
+                    <td><span>28</span></td>
+                    <td><span>29</span></td>
+                    <td><span>30</span></td>
+                </tr>
+                 <tr>
+                    <td><span>1</span></td>
+                    <td><span>2</span></td>
+                    <td><span>3</span></td>
+                    <td><span>4</span></td>
+                    <td><span>5</span></td>
+                    <td><span>6</span></td>
+                    <td><span>7</span></td>
+                </tr>
+                <tr>
+                    <td><span>8</span></td>
+                    <td><span>9</span></td>
+                    <td><span>10</span></td>
+                    <td><span>11</span></td>
+                    <td><span>12</span></td>
+                    <td><span>13</span></td>
+                    <td><span>14</span></td>
+                </tr>
+                <tr>
+                    <td><span>15</span></td>
+                    <td><span>16</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span>15</span></td>
+                    <td><span>16</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <!--用户还未有报名车型状态 二选一-->
+        <!--<a href="javascript:void(0)" class="btn" id="bm_btn">签到领钱</a>-->
+        <!--/用户还未有报名车型状态 二选一-->
+        <!--用户已经有报名车型状态 二选一-->
+        <a href="javascript:void(0)" class="btn" id="qd_btn">签到领钱</a>
+        <!--/用户已经有报名车型状态 二选一-->
+        <div class="data clearfix">
+            <div class="fr">乾坤已发放<span>200000</span>元奖金</div>
+            <div class="fl">已签到:<span>4444</span>人</div>
+        </div>
+    </section>
+    </div>
+    <!--/签到抽奖模块-->
+    <!--报名车型模块-->
+    <section class="bmcx-area comm-box">
+        <div class="comm-hd">
+            <div class="title">报名车型</div>
+        </div>
+        <div class="comm-bd">
+            <!--报名车型 无信息-->
+            <div class="bmcx-unsignin" style="display: none">
+                <div class="info">报名后每天签到<br />即可获得最高<span>1500</span>元购车基金哦~<i></i></div>
+                <a href="#" class="link-btn">报名选车</a>
+            </div>
+            <!--/报名车型 无信息-->
+            <!--报名车型 有信息-->
+            <ul class="bmcx-signin" id="data-c33c">
+                <li><a href="#">
+                    <img src="http://m.qk.cc/mobile_res/resp/assets/loading.gif" data-img="http://image.qk.cc/weixin-image/tmp/20141027/2d41ddce48e548caba498d015115f7a2/0_320x240" alt="" />
+                    <span class="tit">雪佛兰 科鲁兹 2013款 掀背 1.6L自动豪华型雪佛兰 科鲁兹 2013款 掀背 1.6L自动豪华型</span>
+                    <span class="xsj"><i>限时价</i>低价待揭</span>
+                    <span class="zdj"><i>指导价:</i><b>240.00</b>万</span>
+                    <span class="btn">底价购车</span>
+                </a></li>
+                <li><a href="#">
+                    <img src="http://m.qk.cc/mobile_res/resp/assets/loading.gif" data-img="http://image.qk.cc/weixin-image/tmp/20141027/2d41ddce48e548caba498d015115f7a2/0_320x240" alt="" />
+                    <span class="tit">雪佛兰 科鲁兹 2013款 掀背 1.6L自动豪华型雪佛兰 科鲁兹 2013款 掀背 1.6L自动豪华型</span>
+                    <span class="xsj"><i>限时价</i><b>230.43</b>万</span>
+                    <span class="zdj"><i>指导价:</i><b>240.00</b>万</span>
+                    <span class="btn">底价购车</span>
+                </a></li>
+            </ul>
+            <script>data("data-c33c",3)</script>
+            <!--/报名车型 有信息-->
+        </div>
+    </section>
+    <!--/报名车型模块-->
+    <!--规则说明模块-->
+    <section class="rule-area comm-box">
+        <div class="comm-hd">
+            <div class="title">规则说明</div>
+        </div>
+        <div class="comm-bd">
+            <p>1.每人每日可签到1次，购车基金限领1次，截止11月29日前均可累积，签到越早，领取越多哦！</p>
+            <p>2.购车基金每日随机发放：<br />500元 x100个、1000元 x10个、1500元 x5个</p>
+            <p>3.购车基金可在“会员中心-我的中奖账户”中进行查看</p>
+        </div>
+    </section>
+    <!--/规则说明模块-->
+</div>
+<p class="centerwm">
+    <span class="bg" onclick="javascript:window.scrollTo(0,0)"></span>
+    闽ICP备12015839号<br>
+    增值电信业务经营许可证：闽B1-20140016<br>
+    CopyRight © 福建乾坤车城
+</p>
+<!--pupup 报名选车-->
+<div class="popup" id="popup-bm">
+    <div class="inside">
+        <div class="box">
+            <div class="popup-hd">
+                <span class="title-box"></span>
+                <i class="close"><em></em></i>
+            </div>
+            <div class="popup-bd fastreg-box">
+                <div class="info">报名后每天签到<br />即可获得最高<span>1500</span>元购车基金哦~</div>
+                <a href="#" class="btn">报名选车</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/pupup 报名选车-->
+<!--pupup 签到-->
+<div class="popup" id="popup-qd">
+    <div class="inside">
+        <div class="box">
+            <div class="popup-hd">
+                <i class="close"><em></em></i>
+            </div>
+            <div class="popup-bd">
+                <div class="jj-info-outside">
+                    <div class="info jj-info" id="jj-info">OMG！抽中<span id="cute">1500</span>元购车基金<br />你今天真是萌萌达！</div>
+                </div>
+                <div class="jj-value-outside">
+                    <div class="jj-value">
+                        <span class="jj-char">￥</span>
+                        <span class="jj-card" id="jj-card"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/pupup 签到-->
+
+<script src="../../js/lazyLoad.min.js"></script>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script src="../../js/animateValueBackground.js"></script>
+<script src="js/signinlottery.js"></script>
+</body>
+</html>

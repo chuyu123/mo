@@ -1,0 +1,22 @@
+页面变更的东西，一定要体现在前端静态资源文件上，以备查询和统一。
+
+命名编码风格统一部分：
+
+文件名一律使用中划线
+css内容编码部分：
+含中文注释一定要加空格。例/*header*/，含中文内容为/* herder头部模块 */
+iconfont标签均为i标签，class均为"f-sample"格式，css中f-sample中不能写任何样式属性，必须用父级继承形式书写。如.parent .f-sample{}或.parent i{}
+
+文件管理查询部分：
+
+html静态页面模块部分，均放到template目录，并且静态页面模块均用_下划线开头
+	示例：头部模块在pc和mobile目录下分别是：
+	p/template/_header-pc.html
+	m/template/_header-m.html
+公共html和css一律加后缀区分mobile和pc
+	模块css一律增加前缀mod
+		示例：评论模块的css在pc和mobile目录下分别是：
+		pc/css/mod-comment-pc.css
+		mobile/css/mod-comment-m.css
+
+iconfont只用一份，pc和mobile共用，所以两边都需要同步。

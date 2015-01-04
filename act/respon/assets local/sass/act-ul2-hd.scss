@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+Date: 2014-10-15
+*/
+
+/* act-ul2-hd */
+.act-ul2-hd{ border-top:2px solid #b9000d; line-height:35px;}
+.act-ul2-sel{ position:relative; width:110px;float:left; padding:0 10px; color:#666;
+	.tit{color:#b9000d; text-align:center;}
+	.f-detla-bm{ display:inline-block; font-size:.8em; margin-left:8px; line-height:30px;}
+	.ul{ display:none; position:absolute; left:0; top:30px; background:#ddd; z-index:100;}
+	li{ width:120px; line-height:30px; padding-left:10px;}
+	li.cur{ background:#efefef; color:#111;}
+}
+.act-ul2-btn{ float:left; padding:0 10px; color:#666;
+	.f-act-down2{ font-size:.8em; margin-left:3px;}
+}
+.act-ul2-btn.cur{ background:#efefef; color:#111;}
+.act-ul2-sel-open{ 
+	.ul{display:block;}
+	.f-detla-bm{ -webkit-transform:rotate(180deg);}
+}

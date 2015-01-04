@@ -1,0 +1,34 @@
+<!--#include virtual="/m/template/_topbar-m.html"-->
+<!--/header-inside-box-->
+    <div class="member2-box">
+            <div class="top-banner" id="top-banner">
+                <i class="f-member2"></i>
+                <div class="tel">180***93698</div>
+            </div>
+            <ul class="pro-list">
+                <li><a href="#"><i class="f-inte"></i>我的积分</a></li>
+                <li><a href="#"><i class="f-yxorder"></i>我的意向订单</a></li>
+                <li><a href="#"><i class="f-recommend"></i>我的推荐邀请</a></li>
+                <li><a href="#"><span class="relative"><i class="f-myorder"></i><span class="order">2</span></span>我的订单</a></li>
+                <li><a href="#"><span class="relative"><i class="f-ecoupon"></i><span class="ecoupon">•</span></span>我的代金券</a></li>
+                <li><a href="mem-lkxp.html"><span class="relative"><i class="f-pane"></i><span class="pane">hot</span></span>老客新朋计划</a></li>
+                <li><a href="questionaire1.html"><span class="relative"><i class="f-pane"></i><span class="pane-hanzi">领10积分</span></span>调查问卷</a></li>
+            </ul
+    </div>
+<script>
+    //会员积分页面banner随屏幕变化而变化
+	function response(){
+		(function(){
+			if(!document.getElementById("top-banner")) return false;
+			if(document.body.clientWidth < 767){
+				var slide = document.getElementById("top-banner"),
+					bannerHeight = slide.offsetWidth * 0.47;//640*270
+				slide.style.height = bannerHeight + "px";
+			};    
+		})();
+	};
+
+	window.onload = window.onresize = response;
+</script>
+</body>
+</html>

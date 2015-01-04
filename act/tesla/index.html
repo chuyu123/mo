@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link href="css/tesla.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="main-box">
+ <div class="tesla-box">
+     <div class="flag"></div>
+     <div class="banner"><img src="images/tesla/banner.jpg" alt="" width="100%"></div>
+ </div>
+ <div class="tesla-box2">
+    <img src="images/tesla/light.png" alt="" width="100%">
+</div>
+ <div class="tesla-box3">
+    <img src="images/tesla/date.png" alt="" width="100%">
+</div>
+<div class="tesla-box4" id="tesla-box4">
+    <div class="tabcon">
+                <section>
+                    <dl>
+                        <dd class="nobg clearfix">
+                            <input type="text" class="txt" placeholder="请留下您的姓名" name="realName" id="realName" value="">
+                        </dd>
+                        <dd class="nobg clearfix">
+                            <input type="text" class="txt" placeholder="请留下您的手机号" name="phone" id="phone" value="">
+                        </dd>
+                        <dd>
+                            <input type="password" class="ipt" data-verify="verify" name="password" placeholder="请输入登录密码" value="">
+                        </dd>
+                        <dd>
+                            <select name="byCarTime" id="byCarTime">
+                                    <option value="">请选择</option>
+                                    <option value="合适马上就买">合适马上就买</option>
+                                    <option value="1周内">1周内</option>            
+                                </select>
+                        </dd>
+                        <dd>
+                            <input type="text" class="ipt"  name="text" placeholder="您所从事行业" value="">
+                        </dd>
+                    </dl>
+                    <button class="btn" id="submit">提交</button>
+                </section>
+            </div>
+            <div id="popup" class="popup" style="display:none">
+                <div class="inside">
+                    <div class="box">
+                        <div class="popup-hd">
+                            <i class="close"><em></em></i>
+                        </div>
+                        <div class="popup-bd">
+                            预约成功显示提示语"恭喜您已预约成功特斯拉试驾，近期将会有乾坤工作人员与您联系确认试驾事宜。感谢您对乾坤车城的持续关注
+                            <a href="#" class="look">逛逛乾坤</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+ <a href="#tesla-box4" class="yuyue" id="yuyue"></a>
+ </div>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script>
+        //click模拟函数
+    function clickDelay(el) {
+        this.element = typeof el == 'object' ? el : document.getElementById(el);
+        if (window.Touch)  this.element.addEventListener('touchstart', this, false);
+    }
+    clickDelay.prototype = {
+        handleEvent: function (e) {
+            switch (e.type) {
+                case 'touchstart':
+                    this.onTouchStart(e);
+                    break;
+                case 'touchmove':
+                    this.onTouchMove(e);
+                    break;
+                case 'touchend':
+                    this.onTouchEnd(e);
+                    break;
+            }
+        },
+        onTouchStart: function (e) {
+            e.preventDefault();
+            this.moved = false;
+            this.theTarget = document.elementFromPoint(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
+            if (this.theTarget.nodeType == 3) this.theTarget = theTarget.parentNode;
+            this.theTarget.className += ' pressed';
+            this.element.addEventListener('touchmove', this, false);
+            this.element.addEventListener('touchend', this, false);
+        },
+        onTouchMove: function (e) {
+            this.moved = true;
+            this.theTarget.className = this.theTarget.className.replace(/ ?pressed/gi, '');
+        },
+        onTouchEnd: function (e) {
+            this.element.removeEventListener('touchmove', this, false);
+            this.element.removeEventListener('touchend', this, false);
+            if (!this.moved && this.theTarget) {
+                this.theTarget.className = this.theTarget.className.replace(/ ?pressed/gi, '');
+                var theEvent = document.createEvent('MouseEvents');
+                theEvent.initEvent('click', true, true);
+                this.theTarget.dispatchEvent(theEvent);
+            }
+            this.theTarget = undefined;
+        }
+    };
+    //签到按钮
+    (function(){
+        var helpBtn = document.getElementById("submit");
+        if(!helpBtn) return false;
+        new clickDelay(helpBtn);
+        helpBtn.addEventListener("click", function(){
+            popupSubmit();
+        }, false);
+    })();
+    //签到函数
+    function popupSubmit() {
+        console.log(document.getElementById("popup"));
+        var popup = document.getElementById("popup"),
+            inside = popup.getElementsByClassName("inside")[0],
+            box = popup.getElementsByClassName("box")[0],
+            close = popup.getElementsByClassName("close")[0];
+
+        popup.style.display = "block";
+        popup.style.height = document.body.clientHeight + "px";
+        inside.style.top = ( document.documentElement.clientHeight - inside.offsetHeight ) / 2 + "px";
+        box.style.MozTransform = "scale(1)";
+        box.style.WebkitTransform = "scale(1)";
+        box.style.transform = "scale(1)";
+        new clickDelay(close);
+        close.addEventListener("click", function () {
+            box.style.MozTransform = "scale(0)";
+            box.style.WebkitTransform = "scale(0)";
+            box.style.transform = "scale(0)";
+            var clo = setTimeout(function () {
+                popup.style.display = "none"
+            }, 400);
+        }, false);
+    };
+</script>
+</body>
+</html>

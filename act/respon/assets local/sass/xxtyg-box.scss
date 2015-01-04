@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+/* xxtyg-box */
+.tygmix-box{ margin-top:13px; overflow:hidden;}
+.xxtyg-box{ width:100%; border-top:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3; background:#fff; padding:0 10px; @include boxsizing;}
+.xxtyg-hd{ color:#c71a1a; border-bottom:1px solid #efefef; font-size:1.2em; padding:5px 0;
+  i{ font-size:1.2em;}
+}
+.xxtyg-bd{ position:relative; height:165px; margin-top:10px; padding-bottom:10px; background:url(xxtyg-pic.jpg) no-repeat 50% 50%;
+}
+.xxtyg-fd{ padding-top:10px; color:#666;}
+
+@media only screen and (min-width:768px) {
+  .tygmix-box{ height:300px; margin:13px 12px 0; padding-right:190px; background:#fff; border:1px solid #d3d3d3;}
+  .xxtyg-box{ float:left; border:none;}
+  .xxtyg-bd{ height:200px; overflow:hidden;}
+}

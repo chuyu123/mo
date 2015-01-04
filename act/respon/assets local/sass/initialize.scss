@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,a{ margin:0; padding:0;}
+body,button,input,select,textarea,td{ font-size:14px; line-height:20px; font-family:STHeiTi,"Microsoft YaHei",sans-serif;}
+ul,ol{ list-style:none;}
+input[type=text], input[type=password], input[type=number], input[type=submit], input[type=button]{ -webkit-appearance:none;}
+table{ border-collapse:collapse;}
+a{ text-decoration:none;}
+body{ -webkit-overflow-scrolling:touch;}
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.block{ display:block;}
+.of{ overflow:hidden; zoom:1;}
+.fl{ float:left!important;}
+.fr{ float:right!important;}
+.mt10{ margin-top:10px!important;}
+.mt20{ margin-top:20px!important;}
+.center{ text-align:center!important;}
+
+/*
+z-index infomation
+header-inside bmbar 99
+popup 999
+*/

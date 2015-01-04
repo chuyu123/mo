@@ -1,0 +1,874 @@
+<!--#include virtual="/m/template/_topbar-m.html"-->
+<!--calc-box-->
+<div class="calc-box">
+    <ul class="calc-nav-ul clearfix" id="j-calc-nav-ul">
+        <li class="cur"><strong>金融部分</strong><span class="cash">￥<span id="j-calc-nav-val1"></span></span><i class="i1"></i><i class="i2"></i></li>
+        <li><strong>保险部分</strong><span class="cash">￥<span id="j-calc-nav-val2"></span></span><i class="i1"></i><i class="i2"></i></li>
+        <li id="aa3"><strong>加装精品</strong><span class="cash">￥<span id="j-calc-nav-val3">0</span></span><i class="i1"></i><i class="i2"></i></li>
+        <li><strong>购车计算</strong><span class="cash">￥<span id="j-calc-nav-val4"></span></span></li>
+    </ul>
+    <div class="calc-blks clearfix">
+        <div id="calc-blk-inside">
+            <!--stage1-->
+            <div class="calc-blk  calc-area">
+                <ul class="calc-tab clearfix" id="j-stage1-tab">
+                    <li class="cur">贷款购车</li>
+                    <li>全款购车</li>
+                </ul>
+                <div class="calc-cons" id="j-stage1-cons">
+                    <div class="calc-con">
+                        <ul class="calc-list-ul clearfix">
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="csj"><span class="tit">车身价</span></label>
+                                <span class="value-box">
+                                    <input class="change" name="csj" id="csj" type="number" value="182000" data-zvalue="207800" data-gzjvalue="182000" data-seat="5.0" data-displacement="2.0" data-brand="路虎" />元
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="sfk" class="label4sel">
+                                    <span class="tit tit-auto">首付款</span>
+                                    <span class="hide-select-box">
+                                        <span class="hide-select-inside">
+                                            <select class="change" name="sfk" id="sfk">
+                                                <option value="0.3">30%</option>
+                                                <option value="0.4">40%</option>
+                                                <option value="0.5">50%</option>
+                                                <option value="0.6">60%</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </label>
+                                <span class="value-box">
+                                    <b id="sfk-val"></b>元</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tit">贷款金额</span>
+                                <span class="value-box">
+                                    <b id="dkje-val"></b>元</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="xzyh">
+                                    <span class="tit tit-auto">选择银行</span>
+                                </label>
+                                <span class="value-box">
+                                    <span class="hide-select-box">
+                                        <span class="hide-select-inside">
+                                            <select class="change" name="xzyh" id="xzyh">
+                                                <option value="xy">兴业银行</option>
+                                                <option value="zx">中信银行</option>
+                                                <option value="js">建设银行</option>
+                                                <option value="gs">工商银行</option>
+                                                <option value="zg">中国银行</option>
+                                                <option value="pa">平安银行</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="lxzffs">
+                                    <span class="tit tit-auto">利息支付方式</span>
+                                </label>
+                                <span class="value-box w70">
+                                    <span class="hide-select-box">
+                                        <span class="hide-select-inside">
+                                            <select class="selwide change" name="lxzffs" id="lxzffs">
+                                                <option value="ftsq">分摊收取</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tit">利息金额</span>
+                                <span class="value-box" id="lxje-txt"></span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="yg">
+                                    <span class="tit tit-auto">月供</span>
+                                    <span class="hide-select-box">
+                                        <span class="hide-select-inside">
+                                            <select class="selwide change" name="yg" id="yg">
+                                                <option value="0.0588" data-cycle="12">(12期)</option>
+                                                <option value="0.1032" data-cycle="24">(24期)</option>
+                                                <option value="0.144" data-cycle="36" selected="selected">(36期)</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </label>
+                                <span class="value-box">
+                                    <b id="lxje-val"></b>元
+                                </span>
+                            </li>
+                            
+                        </ul>
+                        <a href="#" class="ckyhdb">查看银行对比&gt;&gt;</a>
+                        <div class="calc-list-tit mt15">
+                            <span class="tit">其他费用</span>
+                            <span class="fr">小计：<span id="settle-byhf"></span></span>
+                        </div>
+                        <ul class="calc-list-ul clearfix">
+                            <li>
+                                <span class="tit">购置税</span>
+                                <span class="value-box">
+                                    <b id="gzs"></b>元
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tit">金融服务费</span>
+                                <span class="value-box">
+                                    <b id="jrfwf"></b>元
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tit">抵押服务费</span>
+                                <span class="value-box">
+                                    <b id="dyfw">根据不同银行收取为准</b>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="spfw">
+                                    <span class="tit">上牌服务</span>
+                                </label>
+                                <span class="value-box">
+                                    <span class="hide-select-box w100">
+                                        <span class="hide-select-inside">
+                                            <select class="change" name="spfw" id="spfw">
+                                                <option value="1000">中规车20万以下1000</option>
+                                                <option value="1300">中规车20万以上1300</option>
+                                                <option value="2000">美规车2000</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="calc-con" style="display:none">
+                        <ul class="calc-list-ul clearfix">
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="csj2"><span class="tit">车身价</span></label>
+                                <span class="value-box">
+                                    <input class="change" name="csj2" id="csj2" type="number" value="156324" />元
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="calc-list-tit mt15">
+                            <span class="tit">其他费用</span>
+                            <span class="fr">小计：<span id="settle-byhf2"></span></span>
+                        </div>
+                        <ul class="calc-list-ul clearfix">
+                            <li>
+                                <span class="tit">购置税</span>
+                                <span class="value-box">
+                                    <b id="gzs2"></b>元
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="spfw2">
+                                    <span class="tit">上牌服务费</span>
+                                </label>
+                                <span class="value-box">
+                                    <span class="hide-select-box w100">
+                                        <span class="hide-select-inside">
+                                            <select class="change" name="spfw2" id="spfw2">
+                                                <option value="1000">中规车20万以下1000</option>
+                                                <option value="1300">中规车20万以上1300</option>
+                                                <option value="2000">美规车2000</option>
+                                                <option value="0">全款车自行上牌</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="f-rarr"></i>
+                                <label for="zdsp">
+                                    <span class="tit">是否自行上牌</span>
+                                </label>
+                                <span class="value-box">
+                                    <span class="hide-select-box w100">
+                                        <span class="hide-select-inside">
+                                            <select class="change" name="zdsp" id="zdsp">
+                                                <option value="no">否</option>
+                                                <option value="yes">是</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calc-settle mt15">
+                    <div class="tit">您选择的金融部分</div>
+                    <div class="con contain">
+                        <p id="stage1-p">请选择</p>
+                        <p class="js">全款首付：<b class="val" id="stage1-all-val-q"></b>元</p>
+                        <p class="js">贷款首付：<b class="val" id="stage1-all-val-d"></b>元</p>
+                        <p class="frame" id="stage1-all-val"></p>
+                        <p class="js chajia">差价:<b class="val" id="stage1-all-val-c"></b></p>
+                    </div>
+                </div>
+                <a href="#" style="display:block;width:100%;padding:10px 10px 0;text-align:right;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;color:#395ed6;text-decoration: underline">贷款买车的好处？</a>
+                <div class="bm-bz">注：<br />金融服务费(贷款金额的3%)</div>
+                <a href="#" class="stage-btn">下一步</a>
+            </div>
+            <!--/stage1-->
+            <!--stage2-->
+            <div class="calc-blk">
+                <div class="calc-list-tit">
+                    <span class="tit">必要花费</span>
+                    <span class="fr">小计：<span id="settle2-byhf"></span></span>
+                </div>
+                <ul class="calc-list-ul clearfix">
+                    <li>
+                        <label for="jqx">
+                            <span class="tit tit-auto">交强险</span>
+                            <span class="hide-select-box hide">
+                                <span class="hide-select-inside">
+                                    <select class="selwide change" name="jqx" id="jqx">
+                                        <option value="950">(家用6座以下)</option>
+                                        <option value="1100">(家用6座以上)</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </label>
+                        <span class="value-box">
+                            <b id="jqx-val"></b>元
+                        </span>
+                    </li>
+                    <li>
+                        <label for="ccs">
+                            <span class="tit tit-auto">车船使用税</span>
+                            <span class="hide-select-box hide">
+                                <span class="hide-select-inside">
+                                    <select class="selwide change" name="ccs" id="ccs">
+                                        <option value="180">1.0L(含)以下</option>
+                                        <option value="300">1.0-1.6L(含)</option>
+                                        <option value="360">1.6-2.0L(含)</option>
+                                        <option value="720">2.0-2.5L(含)</option>
+                                        <option value="1500">2.5-3.0L(含)</option>
+                                        <option value="2640">3.0-4.0L(含)</option>
+                                        <option value="3900">4.0L以上</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </label>
+                        <span class="value-box">
+                            <b id="ccs-val"></b>元
+                        </span>
+                    </li>
+                    <li>
+                        <i class="f-rarr"></i>
+                        <label for="">
+                            <span class="tit tit-auto">保险公司</span>
+                        </label>
+                        <span class="value-box">
+                            <span class="hide-select-box">
+                                <span class="hide-select-inside">
+                                    <select class="selwide change" name="" id="">
+                                        <option>平安保险</option>
+                                        <option>太平洋保险</option>
+                                        <option>紫金保险</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="calc-list-tit mt15">
+                    <span class="tit">商业保险-基本险种</span>
+                    <span class="fr">小计：<span id="settle2-byhf2"></span></span>
+                </div>
+                <ul class="calc-list-ul clearfix">
+                    <li class="insurance-sclick in-dszzrx">
+                        <i class="f-rarr"></i>
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="dszzrx">
+                            <span class="tit tit-auto">第三者责任险</span>
+                            <span class="hide-select-box" style="width: 50%">
+                                <span class="hide-select-inside">
+                                    <select class="spchange" name="dszzrx" id="dszzrx" disabled="disabled"></select>
+                                </span>
+                            </span>
+                        </label>
+                        <span class="value-box">
+                            <b id="dszzrx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-clssx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label">
+                            <span class="tit">车辆损失险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="clssx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-qcdqx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label">
+                            <span class="tit">全车盗抢险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="qcdqx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-sjzwzrx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label">
+                            <span class="tit">司机座位责任险(1万)</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="sjzwzrx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-ckzwzrx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label">
+                            <span class="tit">乘客座位责任险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="ckzwzrx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-bjmpx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label">
+                            <span class="tit">不计免赔险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="bjmpx-val"></b>元
+                        </span>
+                    </li>
+                </ul>
+                <div class="calc-list-tit mt15">
+                    <span class="tit">商业保险-附加险种</span>
+                    <span class="fr">小计：<span id="settle2-byhf3"></span></span>
+                </div>
+                <ul class="calc-list-ul clearfix">
+                    <li class="insurance-wclick in-zrssx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="">
+                            <span class="tit">自燃损失险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="zrssx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-sclick in-blddpsx">
+                        <i class="f-rarr"></i>
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="blddpsx">
+                            <span class="tit tit-auto">玻璃单独破碎险</span>
+                                <span class="hide-select-box" style="width: 40%">
+                                    <span class="hide-select-inside">
+                                        <select class="spchange" name="blddpsx" id="blddpsx" disabled="disabled">
+                                            <option value="0.0019">(国产)</option>
+                                            <option value="0.0031">(进口)</option>
+                                        </select>
+                                    </span>
+                                </span>
+                        </label>
+                            <span class="value-box">
+                                <b id="blddpsx-val"></b>元
+                            </span>
+                    </li>
+                    <li class="insurance-sclick in-cshhssx">
+                        <i class="f-rarr"></i>
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="cshhssx">
+                            <span class="tit tit-auto">车身划痕损失险</span>
+                                <span class="hide-select-box" style="width: 40%">
+                                    <span class="hide-select-inside">
+                                        <select class="spchange" name="cshhssx" id="cshhssx" disabled="disabled">
+                                            <optgroup label="新车购置价<30万元">
+                                                <option value="400">2000元</option>
+                                                <option value="570">5000元</option>
+                                                <option value="760">10000元</option>
+                                                <option value="1140">20000元</option>
+                                            </optgroup>
+                                            <optgroup label="新车购置价30~50万元">
+                                                <option value="585">2000元</option>
+                                                <option value="900">5000元</option>
+                                                <option value="1170">10000元</option>
+                                                <option value="1780">20000元</option>
+                                            </optgroup>
+                                            <optgroup label="新车购置价≥50万元">
+                                                <option value="850">2000元</option>
+                                                <option value="1100">5000元</option>
+                                                <option value="1500">10000元</option>
+                                                <option value="2250">20000元</option>
+                                            </optgroup>
+                                        </select>
+                                    </span>
+                                </span>
+                        </label>
+                            <span class="value-box">
+                                <b id="cshhssx-val"></b>元
+                            </span>
+                    </li>
+                    <li class="insurance-wclick in-ssxsssx">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="">
+                            <span class="tit">涉水行驶损失险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="ssxsssx-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-zdzxc">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="">
+                            <span class="tit">指定专修厂</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="zdzxc-val"></b>元
+                        </span>
+                    </li>
+                    <li class="insurance-wclick in-bjmpx2">
+                        <span class="pitch"><i></i></span>
+                        <label class="pitch-label" for="">
+                            <span class="tit">不计免赔险</span>
+                        </label>
+                        <span class="value-box">
+                            <b id="bjmpx2-val"></b>元
+                        </span>
+                    </li>
+                </ul>
+                <div class="calc-list-tit mt15">
+                    <span class="tit">保险年数</span>
+                </div>
+                <ul class="calc-list-ul clearfix">
+                    <li>
+                        <i class="f-rarr"></i>
+                        <label for="bxgmns">
+                            <span class="tit tit-auto">购买年数</span>
+                        </label>
+                        <span class="value-box">
+                            <span class="hide-select-box">
+                                <span class="hide-select-inside">
+                                    <select class="selwide change" name="bxgmns" id="bxgmns">
+                                        <option value="0">1年</option>
+                                        <option value="1">2年</option>
+                                        <option value="2">3年</option>
+                                    </select>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="calc-settle mt15">
+                    <div class="tit">您选择的保险部分</div>
+                    <div class="con">
+                        <p class="js">保险合计：<b class="val" id="stage2-all-val"></b>元</p>
+                    </div>
+                </div>
+                <div class="bm-bz">注：<br />
+                        1、商业险第一年均95折，若选购第二、三年期间优惠至85.5折 <br/>
+                        2、保险费用为预估价，实际以投保项目保单为准 <br/>
+                        3、实际计算用的新车购置价以保险公司给出的为准<br />
+                        4、保险公司可选"平安、太平洋、紫金"
+                </div>
+                <a href="#" class="stage-btn">下一步</a>
+            </div>
+            <!--/stage2-->
+            <!--stage3-->
+            <div class="calc-blk">
+                <div class="jzjp-box">
+                    <ul class="calc-tab clearfix" id="j-jzjp-tab">
+                        <li class="cur">套装精品</li>
+                        <li>单项精品</li>
+                    </ul>
+                    <div class="calc-cons" id="j-jzjp-cons">
+                    <div class="calc-con">
+                   <div class="calc-list-tit">通用套装包</div>
+                    <div class="jzjp-select" id="j-jzjp-select-normal">
+                        <dl>
+                            <dt>
+                                <span>标准包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>标准豪华包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>标准升级包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>商务包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="calc-list-tit">通用套装包</div>
+                    <div class="jzjp-select" id="j-jzjp-select-normal">
+                        <dl>
+                            <dt>
+                                <span>标准包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>标准豪华包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                            <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>标准升级包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li><big class="fl">套装价：<s>￥3300</s></big> <big class="fr">套装活动价：<span class="hl">￥<span>3288</span></span></big></li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                          <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <span>商务包</span><br>
+                                <b class="arrow"></b>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ul class="jzjp-list">
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>舒热佳全车贴膜(顶级+常规)</p>
+                                           <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                        </li>
+                                        <li class="jzjp-list-total">乾坤一口价总计：<span class="hl">￥<span>3484</span></span></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="calc-settle mt15">
+                        <div class="tit">您选择的精品是</div>
+                        <div class="con">
+                            <p id="stage1-p" class="stage3-p">未选择</p>
+                            <p class="js">合计：<b class="val" id="stage3-all-val">0</b>元</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="calc-con">
+                        <div class="calc-list-tit">通用单项精品</div>
+                        <div class="jzjp-select">
+                            <dl>
+                                <dt>
+                                    <span>商务包</span>
+                                    <b class="arrow"></b>
+                                </dt>
+                                <dd>
+                                    <div class="inner">
+                                        <ul class="jzjp-list">
+                                            <li>
+                                                <div class="calc-list-ul"><div class="point2"><i></i></div></div><p class="title">舒热佳全车贴膜(顶级+常规)</p>
+                                               <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                            </li>
+                                            <li>
+                                                <div class="calc-list-ul"><div class="point2"><i></i></div></div><p class="title">舒热佳全车贴膜(顶级+常规)</p>
+                                                <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <span>商务包</span>
+                                    <b class="arrow"></b>
+                                </dt>
+                                <dd>
+                                    <div class="inner">
+                                        <ul class="jzjp-list">
+                                            <li>
+                                                <div class="calc-list-ul"><div class="point2"><i></i></div></div><p class="title">舒热佳全车贴膜(顶级+常规)</p>
+                                                <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                            </li>
+                                            <li>
+                                                <div class="calc-list-ul"><div class="point2"><i></i></div></div><p class="title">舒热佳全车贴膜(顶级+常规)</p>
+                                               <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="calc-list-tit mt15">
+                                <span class="tit">商业保险-基本险种</span>
+                            </div>
+                            <ul class="calc-list-ul clearfix">
+                                <li class="calc-list-ul-jzjp-li">
+                                    <div class="jzjp-checkbox">
+                                            <div class="point2"><i></i></div>
+                                            <dl><dt class="title">前后护杠</dt></dl>
+                                    </div>
+                                   <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                            </p>
+                                </li>
+                                <li class="calc-list-ul-jzjp-li">
+                                    <div class="jzjp-checkbox">
+                                        <div class="point2"><i></i></div>
+                                        <dl><dt class="title">前后护杠</dt></dl>
+                                     </div>
+                                    <p class="price-final">一口价：<span class="hl">￥<span>1742</span></span>&nbsp;&nbsp;市场均价：<span class="hl">￥2142</span>
+                                     </p>
+                                </li>
+                            </ul>
+                            <div class="calc-settle mt15">
+                                <div class="tit">您选择的精品是</div>
+                                <div class="con">
+                                    <p id="stage1-p" class="stage3-p">暂无选择</p>
+                                    <p class="js">合计：<b class="val" id="stage3-all-val">33000</b>元</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <a href="#" class="stage-btn">下一步</a>
+            </div>
+            <!--/stage3-->
+            <!--stage4-->
+            <div class="calc-blk">
+                <div class="settle-box">
+                    <div class="settle-box-hd">金融部分</div>
+                    <div class="settle-box-bd"><p class="mt10" id="to-stage1-p"></p></div>
+                </div>
+                <div class="settle-box">
+                    <div class="settle-box-hd">加装精品</div>
+                    <div class="settle-box-bd"><p class="mt10" id="to-stage2-p"></p></div>
+                </div>
+                <div class="settle-box">
+                    <div class="settle-box-hd j-sh-switch"><i class="f-larrow"></i>保险部分</div>
+                    <div class="settle-box-bd">
+                        <div class="settle-box-title">【必要花费】</div>
+                        <ul class="settle-box-ul">
+                            <li>
+                                <span class="val">￥<b id="s4-jqx-val"></b></span>
+                                <span class="tit">交强险</span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-ccs-val"></b></span>
+                                <span class="tit">车船使用税</span>
+                            </li>
+                        </ul>
+                        <div class="settle-box-title">【商业保险-基本险种】</div>
+                        <ul class="settle-box-ul" id="stage4-jbxz"></ul>
+                        <div class="settle-box-title">【商业保险-附加险种】</div>
+                        <ul class="settle-box-ul" id="stage4-fjxz"></ul>
+                        <div class="settle-box-title">【保险年限】</div>
+                        <ul class="settle-box-ul" id="stage5-bxnx"></ul>
+                    </div>
+                </div>
+                <div class="settle-box">
+                    <div class="settle-box-hd j-sh-switch"><i class="f-larrow"></i>费用明细</div>
+                    <div class="settle-box-bd">
+                        <div class="settle-box-title2">凯迪拉克 凯迪拉克SRX 2014款 3.0L 豪华型</div>
+                        <ul class="settle-box-ul" id="j-settle-box-ul3">
+                            <li>
+                                <span class="val">￥<b id="s4-csj"></b></span>
+                                <span class="tit" id="s4-csj-tit"></span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-gzs"></b></span>
+                                <span class="tit">购置税</span>
+                            </li>
+                            <li class="daikuan">
+                                <span class="val">￥<b id="s4-jrfwf"></b></span>
+                                <span class="tit">金融服务费</span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-spfwf"></b></span>
+                                <span class="tit">上牌服务费</span>
+                            </li>
+                            <li class="daikuan">
+                                <span class="val"><b id="s4-dyfwf">根据不同银行收取为准</b></span>
+                                <span class="tit">抵押服务费</span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-bxje"></b></span>
+                                <span class="tit">保险金额</span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-jzjp"></b></span>
+                                <span class="tit">加装精品</span>
+                            </li>
+                            <li>
+                                <span class="val">￥<b id="s4-all"></b></span>
+                                <span class="tit" id="s4-tit">首付合计</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bm-bz">注：此结果仅供参考，实际费用以现场缴费为准</div>
+                <div class="settle-box-btn">
+                    <a href="#" class="btn1">参加活动</a>
+                    <a href="#" class="btn2">保存</a>
+                </div>
+            </div>
+            <!--/stage4-->
+        </div>
+    </div>
+</div>
+<!--/calc-box-->
+<!--#include file="_footer.html"-->
+<script>
+tab("j-stage1-tab","li","j-stage1-cons",".calc-con");
+tab("j-jzjp-tab","li","j-jzjp-cons",".calc-con");
+</script>
+<script src="js/calc.js"></script>
+</body>
+</html>

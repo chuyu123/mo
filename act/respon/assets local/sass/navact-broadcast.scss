@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+Author: piercalex
+Date: 2014-10-13
+*/
+
+/* navact-broadcast */
+.navact-broadcast{ border-bottom:1px solid #d3d3d3; background:#fff; padding:0 10px 0 35px; font-size:1.1em; height:40px; overflow:hidden;
+  i{ float:left; width:20px; height:20px; line-height:14px; color:#c71a1a; margin:10px 0 0 -25px; font-size:1.1em;}
+}
+.navact-broadcast-scroll{ width:100%; height:20px; overflow:hidden; margin-top:10px; color:#616161;}
+.navact-broadcast-ul{ width:1000%;
+  li{ float:left; width:240px; height:20px;}
+  span{ color:#c71a1a;}
+}
+
+

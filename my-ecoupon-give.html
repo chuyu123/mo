@@ -1,0 +1,36 @@
+<!-- #include file="_topbar.html" --><!---->
+<div class="ecoupon-box">
+    <div class="give-banner"><span></span></div>
+    <div class="info">
+        <p>恭喜您，获得乾坤车城<span>500</span>元购车礼金！</p>
+        <p>本券支持转赠，送给您身边想买车的小伙伴，TA一定会感谢你的！</p>
+    </div>
+    <a href="javascript:void(0)" class="inused clearfix">
+        <span class="icon"></span>
+           <span class="left">
+               <span class="title">￥<b>500</b> 购车礼金</span>
+               <span class="number">奖券编码：123456789</span>
+               <span class="content">您所获得的奖券可用于购买活动车型精品时充当现金使用！</span>
+               <span class="expiry">有效期：2014-09-10 18:00</span>
+           </span>
+           <span class="right">
+               <span>已转赠</span>
+           </span>
+    </a>
+    <a href="javascript:popShareZZ()" class="btn-zz">转赠给TA</a>
+    <div class="btns-zz clearfix">
+        <a href="#">我要领奖</a>
+        <a href="#">进入我的中奖帐户</a>
+    </div>
+</div>
+<!--#include file="_footer.html"-->
+<div class="share-ecoupon-give" id="share-ecoupon-give"></div>
+<script>
+function popShareZZ(){
+    $("#share-ecoupon-give").show();
+    $("#share-ecoupon-give").click(function(){
+        $("#share-ecoupon-give").hide();
+    });
+};
+</script>
+</html>
