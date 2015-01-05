@@ -52,7 +52,8 @@
 .f-myorder:after{content:'\e62c';}
 .f-ecoupon:after{content:'\e6ed';}
 .f-down:after{content:'\e619';}
-.f-fold:after{content:'\e617';}
-.f-unfold:after{content:'\e61b';}
+.f-fold:after{content:'\e61b';}
+.f-unfold:after{content:'\e61c';}
 .f-qklogo:after{content:'\e61e';}
 .f-edit:after{content:'\e620';}
+.f-down:after{content:'\e624';}
