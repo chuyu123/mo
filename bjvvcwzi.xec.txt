@@ -1,0 +1,47 @@
+﻿Merge branch 'julie' of https://github.com/piercalex/m
+
+Conflicts:
+	act/respon/content.html
+	css/mod-iconfont.css
+	font/icomoon.eot
+	font/icomoon.ttf
+	font/icomoon.woff
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   act/respon/assets local/sass/act-li-box.scss
+#	modified:   act/respon/assets local/sass/console-calc-frame.scss
+#	modified:   act/respon/assets local/sass/global.scss
+#	modified:   act/respon/assets local/sass/jgd-bm-box.scss
+#	modified:   act/respon/assets local/sass/xxtyg-box.scss
+#	modified:   act/respon/assets/css.css
+#	modified:   act/respon/assets/icomoon.eot
+#	modified:   act/respon/assets/icomoon.svg
+#	modified:   act/respon/assets/icomoon.ttf
+#	modified:   act/respon/assets/icomoon.woff
+#	modified:   act/respon/assets/js.js
+#	modified:   act/respon/index.html
+#	modified:   css/landingpage2.css
+#	modified:   css/mod-comment-m.css
+#	modified:   css/mod-iconfont.css
+#	modified:   font/icomoon.eot
+#	modified:   font/icomoon.svg
+#	modified:   font/icomoon.ttf
+#	modified:   font/icomoon.woff
+#	modified:   js/common.js
+#	new file:   js/klass.min.js
+#	new file:   mem-mymsg.html
+#	new file:   pg-giveamessage.html
+#	modified:   pg-jingpin.html
+#
+
